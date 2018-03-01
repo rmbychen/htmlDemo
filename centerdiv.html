@@ -8,10 +8,13 @@
 				padding: 0;
 				margin: 0;
 			}
-			/*普通的div定位*/
-			.general{
+			div{
 				width: 200px;
 				height: 200px;
+				margin: 0 auto;
+			}
+			/*普通的div定位*/
+			.general{
 				background-color: blue;
 				margin: 0 auto;
 				/*以下两行目的是让单行文字垂直居中*/
@@ -22,8 +25,6 @@
 
 			/*多行文字垂直居中*/
 			.textmany{
-				width: 200px;
-				height: 200px;
 				background-color: yellow;
 				margin: 0 auto;
 				line-height: 200px;
@@ -38,8 +39,6 @@
 
 			/*定位流的div定位，(子绝父相）*/
 			.father{
-				width: 200px;
-				height: 200px;
 				border:1px solid #ccc;
 				margin: 0 auto;
 				background-color: green;
@@ -60,6 +59,19 @@
 				vertical-align: middle;
 				line-height: 1.5em;
 			}
+			.translate{
+				background-color: skyblue;
+				margin: 0 auto;
+			}
+			.translate .sub{
+				width: 100px;
+				height: 100px;
+				background-color: black;
+				color: white;
+				text-align: center;
+				line-height: 100px;
+				transform: translate(0,50%);
+			}
 		</style>
 	</head>
 	<body>
@@ -71,6 +83,9 @@
 			<div class="son">
 				<span>脱离标准流盒子的定位</span>
 			</div>
+		</div>
+		<div class="translate">
+			<div class="sub">css3中的平移</div>
 		</div>
 	</body>
 </html>
